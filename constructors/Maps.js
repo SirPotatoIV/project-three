@@ -13,9 +13,10 @@ class Map {
         for(let i=0; i <= this.size; i++){
             console.log(i)
             for(let j=0; j <= this.size; j++){
-                const tileLocation = `x${i}y${j}`
+                const tileName = `x${i}y${j}`
+                const tileLocation = [i,j];
                 const newTile = new Tile(tileLocation)
-                this.tiles[tileLocation] = newTile;
+                this.tiles[tileName] = newTile;
                 console.log(this.tiles)
             }
         }
