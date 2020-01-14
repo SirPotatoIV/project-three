@@ -7,13 +7,22 @@ class Map {
         this.tiles = {};
     }
 
-    createMap(){
+    createTiles(){
+        console.log("createTiles has been started")
         // write loop to create 50 * 50 objects that will represent tiles
-        for(let i=0; i === size; i++){
-
+        for(let i=0; i <= this.size; i++){
+            console.log(i)
+            for(let j=0; j <= this.size; j++){
+                const tileLocation = `x${i}y${j}`
+                const newTile = new Tile(tileLocation)
+                this.tiles[tileLocation] = newTile;
+                console.log(this.tiles)
+            }
         }
     }
 }
 
-const map = new Map(50);
+const map = new Map(5);
+map.createTiles();
+
 console.log(map)
