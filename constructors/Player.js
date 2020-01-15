@@ -6,7 +6,18 @@ class Player {
         this.shield = 100;
         this.location = [1,1];
     }
+    
+    // update the players health
+    updateHealth(change){
+        this.health = this.health + change;
+    }
 
+    // update the players shield
+    updateShield(change){
+        this.shield = this.shield + change;
+    }
+
+    // allows the player to move around the map
     updateLocation(direction){
         // listing keys that I plan on using as the inputs for direction.
         // -- possibly makes it easier to change preferred controls later.
@@ -31,10 +42,22 @@ class Player {
         }
     }
 
+    // see if tile is an obstruction or will damage the player
     checkTile(){
         // get tile location from updateLocation
 
         // check tile in map
+    }
+
+    // take in keyboard event and decide which function to call
+    routeKeyboardEvent(key){
+        // based on key, other function is called. Probably use a switch statement
+    }
+
+
+    // give player feedback on interaction with an object
+    interact(){
+
     }
 }
 
